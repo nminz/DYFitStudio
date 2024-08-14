@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body
+{
+    min-height: 200vh;
+}
+
+header
+{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 999;
+}
+header.sticky
+{
+    padding: 25px 100px;
+    background: white
+
+}
+header .logo
+{
+    position: relative;
+    transition: 0.6s;
+    font-weight: 700;
+    
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a
+{
+    position: relative;
+    margin: 0 2rem;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: x-large;
+    transition: 0.6s;
+}
+
+header ul li a:hover, header ul li a:active
+{
+    color:#cc529e;
+    transition: 0.1s;
+}
+
+.buttonNav {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: x-large;
+    margin: 3px 1.5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 500;
+  }
+  
+  .buttonNav1 {
+    background-color: #cc529e; 
+    border: 2px solid #cc529e;
+    border-radius: 3em;
+  }
+
+  .buttonNav1:hover {
+    background-color: white;
+    color:#cc529e;
+  }
+  
+  .banner
+  {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url();
+    background-size: cover;
+  }
+
+
+  header.sticky ul li a
+  {
+    color: #cc529e;
+  }
+
+  .container
+  {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content
+  {
+    text-align: center;
+  }
+
+  .content h1
+  {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: 0.6em;
+  }
+
+  .contentButton {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 3px 1.5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 700;
+  }
+  
+  .contentButton1 {
+    background-color: transparent; 
+    border: 4px solid white;
+    border-radius: 3em;
+  }
+
+  .contentButton1:hover {
+    background-color: #cc529e;
+    color:white;
+  }
+
+  .background-clip
+  {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness(0.25);
+  }
+
+@media (min-aspect-ratio: 16/9)
+{
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+
+    .card{
+        .background-clip{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-aspect-ratio: 16/9)
+{
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+
+    .card{
+        width: auto;
+        height: 100%;
+    }
+}
+
+h2
+{
+    margin-bottom: 2em;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.section2 {
+    margin-top: 4rem;
+    padding-bottom: 4rem; /* Add padding to ensure there's space to scroll */
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.vid-container1 {
+    width: 100%; /* Full width of the page */
+    height: 15rem; /* Adjust the height to control the aspect ratio */
+    overflow: hidden; /* Hide the overflow */
+    position: relative; /* Make sure children are positioned relative to this container */
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: filter 0.6s ease, height 0.6s ease; /* Smooth transition for filter and height */
+}
+
+.vid-container1 video {
+    width: 100%; /* Make the video take up the full width */
+    height: 100%; /* Make the video take up the full height */
+    object-fit: cover; /* Maintain aspect ratio and crop the image to fill the container */
+    position: absolute; /* Position video absolutely within the container */
+    top: 0;
+    left: 0;
+    filter: brightness(0.3);
+    transition: filter 0.6s ease, height 0.6s ease; /* Smooth transition for filter and height */
+
+}
+
+.vid-container1 .overlay-text {
+    position: absolute; /* Position text absolutely within the container */
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: #ffffff; /* Text color */
+    font-size: 4rem; /* Adjust text size */
+    text-align: center; /* Center text alignment */
+    pointer-events: none; /* Prevents text from interfering with video controls */
+    z-index: 1; /* Ensure text is on top of the video */
+    transition: opacity 0.6s ease; /* Smooth transition for text opacity */
+    opacity: 100%;
+    letter-spacing: 1em;
+}
+
+.vid-container1:hover, .vid-container1:active {
+    filter: brightness(1);
+    height: 40rem; /* Increase the height on hover */
+}
+
+.vid-container1 video:hover {
+    filter: brightness(1);
+}
+
+.vid-container1:hover .overlay-text {
+    opacity: 0; /* Hide text on hover */
+    
+}
+
+.instagram-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200%; /* Adjust this to be double the width of the container */
+    animation: scroll 10s linear infinite;
+    gap: 4px;
+}
+
+.carousel-track.clone {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position the cloned track right after the first one */
+    gap: 4px;
+}
+
+.instagram-media {
+    flex: 1;
+    min-width: 300px; /* Width of each item */
+    max-width: 300px; /* Control the width of each item */
+    gap: 4px;
+}
+
+/* Scroll keyframe animation */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move track by half of its width */
+    }
+}
